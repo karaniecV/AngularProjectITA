@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+$mainfont:'Bungee Outline', cursive;
+
+.body-content{
+  display: flex;
+}
+
+app-sidebar{
+  width: 15%;
+  background-color: coral;
+  font-family: $mainfont;
+}
+
+app-content{
+  width: 70%;
+  background-color: cornflowerblue;
+}
+
+app-footer{
+  background-color: cornflowerblue;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
