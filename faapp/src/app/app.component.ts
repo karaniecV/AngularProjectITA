@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'faapp';
+  
+  activePage = 'profile';
+
+  onSidebarClick(page: string){
+    this.activePage = page;
+    console.log('page', page)
+  }
 }

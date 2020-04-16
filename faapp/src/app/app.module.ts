@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { PofileComponent } from './sidebar/pofile/pofile.component';
+import { ProfileComponent } from './sidebar/profile/profile.component';
 import { SearchComponent } from './header/search/search.component';
 import { SearchInputComponent } from './header/search/search-input/search-input.component';
 import { SearchBtnComponent } from './header/search/search-btn/search-btn.component';
@@ -15,6 +15,7 @@ import { FrendItmComponent } from './sidebar/messages/frend-itm/frend-itm.compon
 import { ContentComponent } from './content/content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     FooterComponent,
     HeaderComponent,
-    PofileComponent,
+    ProfileComponent,
     SearchComponent,
     SearchInputComponent,
     SearchBtnComponent,
     MessagesComponent,
     FrendItmComponent,
     ContentComponent,
+    SignUpComponent,
     ],
   imports: [
     BrowserModule,

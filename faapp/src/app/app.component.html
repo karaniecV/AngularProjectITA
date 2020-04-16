@@ -1,8 +1,20 @@
 <app-header></app-header>
 <div class="body-content">
-  <app-sidebar></app-sidebar>
+  <app-sidebar (sidebarClick)="onSidebarClick($event)"></app-sidebar>
 
-  <app-content></app-content>
+  
+    <!-- <app-sign-up *ngIf="activePage === 'signup'"></app-sign-up> -->
+    <app-messages class="content" *ngIf="activePage === 'messages'"></app-messages>
+    <app-profile class="content" *ngIf="activePage === 'profile'"></app-profile>
+    
+    
+
+    
+
+
+
 </div>
+
+
 
 <app-footer></app-footer>

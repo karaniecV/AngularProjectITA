@@ -5,13 +5,16 @@ $mainfont:'Bungee Outline', cursive;
   display: flex;
 }
 
+.navbar{
+  background-color: lightblue;
+}
 app-sidebar{
   width: 15%;
-  background-color: coral;
+  background-color: lightpink;;
   font-family: $mainfont;
 }
 
-app-content{
+.content{
   width: 70%;
   background-color: cornflowerblue;
 }

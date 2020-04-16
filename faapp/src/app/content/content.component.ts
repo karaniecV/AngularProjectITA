@@ -34,6 +34,7 @@ export class ContentComponent implements OnInit {
     this.address = '';
 
   }
+  
 
 
 

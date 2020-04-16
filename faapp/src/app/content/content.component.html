@@ -1,19 +1,16 @@
-<p>content works!</p>
-{{message}}
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input [(ngModel)] ="address" name="address" type="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<app-sign-up></app-sign-up>
+
+<!-- <div *ngIf = "activePage === 'messages'">
+  <app-frend-itm></app-frend-itm>
+  <app-frend-itm></app-frend-itm>
+  <app-frend-itm></app-frend-itm>
+  <app-frend-itm></app-frend-itm>
+</div>
+
+<div class="container" *ngIf = "activePage === 'profile'">
+  <div class="row">
+    <img
+      src="https://techcrunch.com/wp-content/uploads/2015/09/11667534_10102203860243201_2713296330820668368_n.jpg?w=528"
+      alt="">
   </div>
-  <div class="form-group" *ngIf="address.length > 0">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" >
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary" [disabled] = "address.length === 0" (click)="onClick()">Submit</button>
-</form>
-{{address}}
+</div> -->
