@@ -19,5 +19,7 @@ export class SidebarComponent implements OnInit {
     this.sidebarClick.emit(this.links[item])
     console.log('item', item)
   }
+ 
+
 
 }

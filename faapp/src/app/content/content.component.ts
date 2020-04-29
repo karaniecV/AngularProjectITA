@@ -28,12 +28,12 @@ export class ContentComponent implements OnInit {
   //   return this.message = 'hello world!';
   // }
 
-  onClick(){
-    this.addresses.push(this.address);
-    console.log('this.addresses', this.addresses)
-    this.address = '';
+  // onClick(){
+  //   this.addresses.push(this.address);
+  //   console.log('this.addresses', this.addresses)
+  //   this.address = '';
 
-  }
+  // }
   
 
 

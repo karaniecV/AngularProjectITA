@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-$mainfont:'Bungee Outline', cursive;
+$mainfont: 'Viga', sans-serif;
 
 .body-content{
   display: flex;
 }
 
 .navbar{
-  background-color: lightblue;
+  background-color: rgb(4, 185, 140);
 }
 app-sidebar{
+  
   width: 15%;
-  background-color: lightpink;;
+  background-color: rgb(241, 237, 237);
   font-family: $mainfont;
+  padding-left: 5%;
 }
 
 .content{

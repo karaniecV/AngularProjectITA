@@ -1,20 +1,6 @@
 <app-header></app-header>
 <div class="body-content">
   <app-sidebar (sidebarClick)="onSidebarClick($event)"></app-sidebar>
-
-  
-    <!-- <app-sign-up *ngIf="activePage === 'signup'"></app-sign-up> -->
-    <app-messages class="content" *ngIf="activePage === 'messages'"></app-messages>
-    <app-profile class="content" *ngIf="activePage === 'profile'"></app-profile>
-    
-    
-
-    
-
-
-
+  <router-outlet></router-outlet>
 </div>
-
-
-
 <app-footer></app-footer>

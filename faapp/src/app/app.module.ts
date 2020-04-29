@@ -16,6 +16,7 @@ import { ContentComponent } from './content/content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { HideDirective } from './shared/directives/hide.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     FrendItmComponent,
     ContentComponent,
     SignUpComponent,
+    HideDirective,
     ],
   imports: [
     BrowserModule,
