@@ -1,1 +1,5 @@
-<div>Main page</div>
+<div *ngFor="let posts of posts">
+  <div>{{posts.description}}</div>
+  <div>{{posts.date}}</div>
+  <img [src]="posts.photo" style="width: 50%;">
+</div>

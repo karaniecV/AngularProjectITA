@@ -1,5 +1,6 @@
-<div class="content" >
-  <app-frend-itm></app-frend-itm>
-  <app-frend-itm></app-frend-itm>
-  <app-frend-itm></app-frend-itm>
+<div class="content" *ngFor="let friends of friends; let i = index">
+  <img [src]="friends.image" style="width: 30%;">
+  <a href="">{{friends.name}}</a>
+
+ 
 </div>

@@ -11,7 +11,6 @@ import { SearchComponent } from './header/search/search.component';
 import { SearchInputComponent } from './header/search/search-input/search-input.component';
 import { SearchBtnComponent } from './header/search/search-btn/search-btn.component';
 import { MessagesComponent } from './sidebar/messages/messages.component';
-import { FrendItmComponent } from './sidebar/messages/frend-itm/frend-itm.component';
 import { ContentComponent } from './content/content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -29,7 +28,6 @@ import { HideDirective } from './shared/directives/hide.directive';
     SearchInputComponent,
     SearchBtnComponent,
     MessagesComponent,
-    FrendItmComponent,
     ContentComponent,
     SignUpComponent,
     HideDirective,
