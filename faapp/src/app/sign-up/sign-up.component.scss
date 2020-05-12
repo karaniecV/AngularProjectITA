@@ -1,0 +1,25 @@
+.ng-invalid.ng-touched{
+  border-color: red;
+}
+
+.ng-valid.ng-touched{
+  border-color: green;
+}
+
+button{
+  background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    box-shadow: inset 0 1px 1px #a4e388;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+}
+
+.mistake{
+  display: flex;
+}
+.mistake p{
+  margin-top: 2px;
+}
+.mistake img{
+  height: 24px;
+  margin: 0px 0px 16px;
+}
