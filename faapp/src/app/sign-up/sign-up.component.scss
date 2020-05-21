@@ -1,0 +1,15 @@
+.mistake{
+  display: flex;
+}
+
+.mistake img{
+  height: 25px;
+}
+
+.ng-valid.ng-touched{
+  border-color: green;
+}
+
+.ng-invalid.ng-touched{
+  border-color: red;
+}
