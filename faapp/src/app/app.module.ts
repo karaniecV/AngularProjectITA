@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HideDirective } from './shared/directives/hide.directive';
+import { EmailPhoneValidatorDirective } from './shared/validation/email-phone-validator.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HideDirective } from './shared/directives/hide.directive';
     ContentComponent,
     SignUpComponent,
     HideDirective,
+    EmailPhoneValidatorDirective,
     ],
   imports: [
     BrowserModule,

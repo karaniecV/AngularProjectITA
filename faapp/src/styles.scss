@@ -1,18 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-$mainfont: 'Viga', sans-serif;
-
 .body-content{
   display: flex;
 }
+body{
+background: url(./assets/images/background.jpg);
+
+}
 
 .navbar{
-  background-color: rgb(4, 185, 140);
+  // background: radial-gradient(  #daff00, #78a600);
+  opacity: 80%;
 }
 app-sidebar{
-  
-  width: 15%;
-  background-color: rgb(241, 237, 237);
-  font-family: $mainfont;
+  width: 18%;
   padding-left: 5%;
 }
 

@@ -1,14 +1,25 @@
+@import "variables";
 
+.navbar{
+  box-shadow: 0px 0px 25px rgba(52, 52, 53, 0.15);
+  border-radius: 0px;
+}
 .navbar-brand{
-  font-size: 45px;
-  font-family: 'Audiowide', cursive;
-  color: rgb(4, 185, 140);
-  background-color: white;
-  height: 65px  ;
+  font-size: 35px;
+  font-family: Yeseva One;
+  color: $fontcolor;
+  padding: 0;
+  height: 44px;
+  margin-bottom:20px;
 }
 
 img{
   height: 30px;
   width: 30px;
-  border-radius: 50%;
+
+  // border-radius: 50%;
+}
+.navbar-brand img{
+  height: 50px;
+  width: 50px;
 }
