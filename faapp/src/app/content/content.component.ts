@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MyPostsService } from '../shared/services/my-posts/my-posts.service';
+import { Post } from '../shared/models/post.model';
 
 @Component({
   selector: 'app-content',
@@ -7,35 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  // message = "";
+  posts: Post[];
 
-  // rtrt = 'gfhfg';
-
-  addresses: string[] = [];
-  address = '';
-
-  constructor() { 
-    // setTimeout(() => {
-    //   this.getMessage();
-
-    // }, 3000)
-  }
+  constructor(private myPostService: MyPostsService) {}
 
   ngOnInit(): void {
+    this.posts = this.myPostService.myPosts;
   }
 
-  // public getMessage(): string {
-  //   return this.message = 'hello world!';
-  // }
-
-  // onClick(){
-  //   this.addresses.push(this.address);
-  //   console.log('this.addresses', this.addresses)
-  //   this.address = '';
-
-  // }
   
-
-
-
 }
