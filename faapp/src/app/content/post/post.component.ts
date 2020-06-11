@@ -85,7 +85,7 @@ onChangePost(id, form: NgForm) {
     }
 
   })
-  // this.isHideAria()
+  this.isHideAria()
 }
 
 // onFormPostSubmit(form: NgForm) {
@@ -118,12 +118,10 @@ onAddLike(post){
     likeCount: this.likeCount,
   }
   this.myPostService.updatePost(post.id, newPost).subscribe()
-  //   (data=> {
-  //   if(data){
   return this.likeCount
-  //   }
-  // })
-  // )
+}
+onRemoveImg(){
+  this.imageSrc = null;
 }
 
 

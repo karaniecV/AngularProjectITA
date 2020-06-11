@@ -2,7 +2,7 @@
 <div class="container">
   <div class="body-content row">
     <app-sidebar class="col-3" *ngIf="$user | async" (sidebarClick)="onSidebarClick($event)"></app-sidebar>
-    <div class="router-content col-md-6 col-12">
+    <div class="router-content col-md-6 col-12" style="margin: auto;">
       <app-errors></app-errors>
       <router-outlet></router-outlet>
     </div>

@@ -48,7 +48,6 @@ export class SingleContactComponent implements OnInit {
     })
   }
   onDeliteContact(id) {
-    this.authService.autoLogIn()
 
   }
 

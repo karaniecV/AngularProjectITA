@@ -17,7 +17,6 @@ export class AuthService {
 
   user: BehaviorSubject<User> = new BehaviorSubject<User>(null);
 
-  // userData: UserData;
   userData: BehaviorSubject<ContactData> = new BehaviorSubject<ContactData>(null);
 
   userValue: ContactData;
@@ -69,6 +68,7 @@ export class AuthService {
   }
 
   getSignUser(userId): Observable<any> {
+    debugger
     return this.http.get(`${CONFIG.server}/userData/${userId}.json`)
       .pipe(
         map((data) => {

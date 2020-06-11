@@ -1,26 +1,26 @@
 <div class="back" *ngIf="contactClick">
   <div class="contact">
     <div class="main-info-user row">
-        <div class="foto-user col-7"><img [src]="contactClick.foto" alt="" style="max-width: 500px;"></div>
+        <div class="foto-user col-7"><img [src]="contactClick.foto" alt="" style="max-width: 400px; max-height: 400px;"></div>
         <div class="user-names col-5">
           <h2>{{contactClick.firstName}}</h2>
           <h1>{{contactClick.secondName}}</h1>
           <h4>{{contactClick.emailPhone}}</h4>
-          <button class="btn btn-danger" (click)="onDeliteContact(contactClick.id)">remove from contacts</button>
+          <button class="btn btn-danger" (click)="onDeliteContact( contactClick.id)">remove from contacts</button>
         </div>
-    </div>
+    </div>  
     <div class="second-info-user">
       <div class="bate-birth">
-        <div>Date of Birth</div>
-        <div>{{contactClick.monthBth}}.{{contactClick.dayBth}}.{{contactClick.yearBth}}</div>
+        <h6>Date of Birth:</h6>
+        <h5>{{contactClick.monthBth}}.{{contactClick.dayBth}}.{{contactClick.yearBth}}</h5>
       </div>
       <div class="place-birth">
-        <div>Place of Birth</div>
-        <div>Manaco</div>
+        <h6>Place of Birth:</h6>
+        <h5>Manaco</h5>
       </div>
-      <div>
-        <div>alma mater</div>
-        <div>BDU</div>
+      <div class="alma-mater">
+        <h6>alma mater:</h6>
+        <h5>BDU</h5>
       </div>
       <div></div>
       <div></div>

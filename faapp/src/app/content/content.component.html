@@ -34,18 +34,20 @@
 
   <div *ngFor="let posts of posts" class="post" [routerLink]="['/posts', posts.id]">
     <div class="container">
-      <div class="row-posts row">
-        <div><img src="" alt=""></div>
+      <div class="row-posts row" class="align-items: baseline;">
+        <!-- <div><img src="" alt=""></div> -->
         <div>{{userData.firstName}}</div>
-        <div style="font-size: 12px;">{{ posts.postDate | date:'MM.dd.yyyy hh:mm aa ' }}</div>
+        <div style="margin-left: 5px; font-size: 12px; ">{{ posts.postDate | date:'MM.dd.yyyy hh:mm aa ' }}</div>
       </div>
       <img src="{{posts.postFile}}" style="max-width: 100%;
         max-height: 250px; margin-top: 15px; margin-bottom: 20px;">
-      <div>{{posts.postDescription}}</div>
-      <div class="row">
-        <div class="col-3">Like</div>
-        <div class="col-2">0</div>
-        <div class="col-7">Coment</div>
+      <div style="margin-top: 15px; margin-bottom: 15px;">{{post.postDescription}}</div>
+
+      <div class="container">
+        <div class="row" style="justify-content: space-between;
+        align-items: baseline;">
+          <button class="btn btn-outline-danger" >Like<span>{{post.likeCount}}</span></button>
+        </div>
       </div>
     </div>
   </div>
@@ -72,12 +74,13 @@
         placeholder="Hello World !" style="width: 100%; height: 50px;" id="" cols="30" rows="3">
       </textarea>
       <div class="inpt-img">
-        <div class="container">
-          <img name="post-file" [src]="imageSrc" style="max-height: 300px; max-width: 300px;" alt="">
-        </div>
         <div class="btn-cncl col-2" *ngIf="imageSrc" (click)="onRemoveImg()">
           <img src="../../assets/images/cancel.png" alt="" appFocus1 title="Remove image">
         </div>
+        <div class="container">
+          <img name="post-file" [src]="imageSrc" style="max-height: 300px; max-width: 300px; margin: auto;" alt="">
+        </div>
+        
       </div>
 
       <hr>

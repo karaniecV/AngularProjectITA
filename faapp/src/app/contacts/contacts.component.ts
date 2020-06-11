@@ -23,23 +23,18 @@ export class ContactsComponent implements OnInit {
   constructor(private contactsService: ContactsService) { }
 
   ngOnInit() {
-    this.contactsService.getFriendsId().subscribe()
-    this.contactsService.usersFrends.subscribe((data)=>{
-      this.usersFriends = data
+    this.contactsService.getFriendsId()
+    .pipe(
+      finalize(()=>{
+        this.contactsService.usersFrends.subscribe((data)=>{
+          this.usersFriends = data;
+        })
+      })
+    )
+    .subscribe((data) => {
+      this.contactsService.usersFrends.next(data)
+       this.usersFriends = data.value;
     })
-    
-    // .pipe(
-    //   finalize(()=>{
-    //     this.contactsService.usersFrends.subscribe((data)=>{
-    //       this.usersFriends = data;
-    //     })
-    //   })
-    // )
-    // .subscribe((data) => {
-    //   this.contactsService.usersFrends.next(data)
-    //   //  this.usersFriends = data.value;
-    //   // console.log('this.friends', this.friends)
-    // })
 
   }
 
@@ -49,9 +44,8 @@ export class ContactsComponent implements OnInit {
 
   onInputChange(value) {
     this.newArr = [];
-    this.friends.forEach((item) => {
-      // console.log('this.friends', this.friends)
-      let finde = item.name.toLowerCase().includes(value);
+    this.usersFriends.forEach((item) => {
+      let finde = item.firstName.toLowerCase().includes(value);
       if (finde) {
         this.newArr.push(item)
       }

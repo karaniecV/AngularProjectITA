@@ -23,7 +23,6 @@ export class ContactsService {
   users: ContactData[] = [];
 
   myFriends = [];
-  contactValue: ContactData
 
 
   constructor(private http: HttpClient, private authService: AuthService) { }
@@ -94,56 +93,7 @@ export class ContactsService {
       )
   }
 
-  // getUser(userId): Observable<any> {
-  //   return this.http.get(`${CONFIG.server}/userData/${userId}.json`)
-  //     .pipe(
-  //       map((data: ContactData) => {
-  //         let contactData = [];
-  //         for (let key in data) {
-  //           contactData.unshift({ id: key, ...data[key] });
-  //         }
-  //         debugger
-  //         const dataContact = contactData[0];
-  //         console.log('dataContact', dataContact)
-  //         // this.userData.next(dataUser);
-  //         this.contactValue = dataContact.getValue();
-  //         console.log('this.contactValue', this.contactValue)
-  //         // console.log('this.userData', this.userData)
-  //         return dataContact;
-  //       })
-  //     )
-  // }
 
-
-  // filterFrend(usersArr){
-  //   this.usersData.forEach(i => {
-  //     const data: any = Object.entries(i);
-  //     const id = data[0][1];
-  //     const name = `${data[1][1].firstName} ${data[1][1].secondName}`;
-  //     const image = `${data[1][1].foto}`;
-  //     const userData = { id, name, image };
-  //     // console.log('userData', userData)
-  //     const users = [];
-  //     debugger
-  //     // this.users.push(userData);
-  //     // console.log('users', users)
-  //   })
-
-  //   usersArr.forEach(i => {
-  //     debugger
-  //     i.userId
-  //     this._myFriends.forEach(item => {
-  //       if(String(item.id) === String(item.id)){
-  //         const myContact = [];
-  //         myContact.push(item);
-  //         // console.log('myContact', myContact)
-  //       }
-  //     })
-  //   })
-
-
-
-  // }
 
 
 

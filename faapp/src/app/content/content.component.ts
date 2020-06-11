@@ -32,15 +32,12 @@ export class ContentComponent implements OnInit {
 
 
   ngOnInit(): void {
-    // this.myPostService.deletePost.subscribe(data=> console.log(data))
     if (localStorage.getItem(`${CONFIG.localStorageId}`)) {
       this.authSevice.autoLogIn();
       this.authSevice.getSignUser(localStorage.getItem(`${CONFIG.localStorageId}`))
         .subscribe(user => this.userData = user)
 
 
-          // this.userName = user.firstName)
-      // this.posts = [];
       this.myPostService.getPosts().subscribe((data: Post[]) => {
         this.posts = data;
       })
@@ -72,7 +69,6 @@ export class ContentComponent implements OnInit {
       const reader = new FileReader();
       reader.onload = ((e) => {
         this.imageSrc = e.target['result'];
-        // console.log('this.imageSrc', this.imageSrc)
         this.image = event.target.files[0];
       });
       reader.readAsDataURL(event.target.files[0]);
