@@ -1,0 +1,136 @@
+@import "variables";
+
+.footer{
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: 30px;
+  // z-index: 5;
+}
+
+.foot-list a{
+  display: flex;
+  flex-direction: column;
+  font-family: $mainfont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.title-footer{
+  margin-bottom: 15px;
+  font-family: $mainfont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: $fontcolor;
+}
+
+.social-down{
+  display: flex;
+  align-items: center;
+  width: 23px;
+height: 24px;
+}
+
+.mail-set input{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: $mainfont;
+  font-size: 13px;
+  line-height: 13px;
+  color: rgba(0, 0, 0, 0.7);
+  border:none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.rights{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  font-family: $mainfont;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+
+.col-fore img{
+  width: 205px;
+  height: 195px;
+}
+.col-fore h2 a{
+  font-family: $mainfont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: $fontcolor;
+  width: 205px;
+}
+
+.col-fore .titleEl{
+text-align: center;
+}
+
+.product-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.product-list .btn-group{
+  justify-content: end;
+}
+.products{
+  display: block;
+}
+.col-fore{
+  float: left;
+  margin: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col-fore button{
+  width: 110px;
+  height: 40px;
+  border: 1px solid #46749B;
+  box-sizing: border-box;
+  font-family: $mainfont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $fontcolor;
+}
+
+.col-fore .cost{
+  font-family: $mainfont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: $fontcolor;
+  margin-bottom: 15px;
+}
+
+.rights {
+  position: fixed;
+  left: 0;
+  bottom: -60px;
+  padding: 10px;
+  background: #36518d;
+  color: #fff;
+  width: 100%;
+ }
+.footer{
+  margin-top: 75px;
+}

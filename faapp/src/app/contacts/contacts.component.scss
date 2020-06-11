@@ -1,0 +1,55 @@
+@import "variables";
+
+.contact-img{
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.contact-item{
+  margin-bottom: 10px;
+  margin-right: 10px;
+  align-items: center;
+  font-family: $mainfont;
+}
+
+.banner{
+  color: $fontbanner;
+  font-size: 19px;
+  padding-right: 15px;
+}
+
+.contact-item2{
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+.contact-box{
+  overflow-y: scroll;
+  height: 310px;
+  overflow-x: hidden;
+}
+
+.container-contact{
+  background-color: whitesmoke;
+  border-radius: 20px;
+  color: $fontbanner;
+  width: 280px;
+  box-shadow: 0 0 5px;
+  left: 55%;
+  top: 30%;
+  position: fixed;
+}
+
+input, input:active, input:focus{
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.search-contact{
+  flex-direction: column;
+  padding-left: 25px;
+}

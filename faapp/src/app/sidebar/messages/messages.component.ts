@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FriendsService } from '../../shared/services/friends/friends.service';
-import { Friend } from 'src/app/shared/models/friend.model';
+import { ContactsService } from 'src/app/shared/services/contacts-service/contacts.service';
+import { ContactData } from 'src/app/shared/models/contact-data.model';
 
 @Component({
   selector: 'app-messages',
@@ -9,13 +9,13 @@ import { Friend } from 'src/app/shared/models/friend.model';
 })
 export class MessagesComponent implements OnInit {
 
-  friends: Friend[];
+  friends: ContactData[];
   
-  constructor(private friendService: FriendsService) { }
+  constructor(private contactsService: ContactsService) { }
 
   ngOnInit(): void {
-    this.friends = this.friendService.myFriends
-    console.log('this.friends', this.friends)
+      this.contactsService.usersFrends.subscribe(data=> this.friends = data)
+      console.log('this.friends', this.friends)
     
   }
 

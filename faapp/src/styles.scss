@@ -1,29 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-.body-content{
-  display: flex;
-}
+
 body{
 background: url(./assets/images/background.jpg);
+background-repeat: round;
 
 }
 
-.navbar{
-  // background: radial-gradient(  #daff00, #78a600);
-  opacity: 80%;
-}
-app-sidebar{
-  width: 18%;
-  padding-left: 5%;
-}
+// .navbar{
+//   // background: radial-gradient(  #daff00, #78a600);
+//   opacity: 80%;
+// }
 
-.content{
-  width: 70%;
-  background-color: cornflowerblue;
-}
 
-app-footer{
-  background-color: cornflowerblue;
-}
+// .content{
+//   width: 70%;
+//   background-color: cornflowerblue;
+// }
 
-html, body { height: 100%; }
+
+
+// html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

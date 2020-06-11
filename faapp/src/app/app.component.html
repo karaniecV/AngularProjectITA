@@ -1,6 +1,24 @@
 <app-header></app-header>
-<div class="body-content">
-  <app-sidebar (sidebarClick)="onSidebarClick($event)"></app-sidebar>
-  <router-outlet></router-outlet>
+<div class="container">
+  <div class="body-content row">
+    <app-sidebar class="col-3" *ngIf="$user | async" (sidebarClick)="onSidebarClick($event)"></app-sidebar>
+    <div class="router-content col-md-6 col-12">
+      <app-errors></app-errors>
+      <router-outlet></router-outlet>
+    </div>
+    <app-contacts class="col-3" *ngIf="$user | async"></app-contacts>
+    <app-loader></app-loader>
+  </div>
+
 </div>
 <app-footer></app-footer>
+
+
+
+<!-- <div class="container">
+<div class="row">
+  <div class="col-2" *ngIf="!isMobile" style="background-color: red;">1</div>
+  <div class="col-8" style="background-color: blue;">2</div>
+  <div class="col-2" *ngIf="!isMobile" style="background-color: green;">3</div>
+</div>
+</div> -->

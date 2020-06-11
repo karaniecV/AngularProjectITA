@@ -1,8 +1,9 @@
 export class Post{
   constructor(
-    public photo: string,
-    public date: string,
-    public description: string,
-    public id: number,
+    public postFile: string,
+    public postDate: string,
+    public postDescription: string,
+    public id: string,
+    public likeCount: number,
   ){}
 }

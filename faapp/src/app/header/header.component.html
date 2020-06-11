@@ -2,7 +2,7 @@
   <a class="navbar-brand"
     routerLink="/"
     [routerLinkActive]="'active'"
-    [routerLinkActiveOptions]="{exact: true}" appHide>FAAPP</a>
+    [routerLinkActiveOptions]="{exact: true}" appFocus2>FAAPP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse"
     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     ria-expanded="false" aria-label="Toggle navigation"
@@ -14,24 +14,63 @@
   [ngClass] = "{'show': collapsed}">
   <app-search></app-search>
 
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" style="align-items: baseline;">
+      <ng-container *ngIf="$user | async">
       <li class="nav-item">
         <a class="nav-link profile" routerLink="my-profile"
-        [routerLinkActive]="'active'"><img class="img" src="https://techcrunch.com/wp-content/uploads/2015/09/11667534_10102203860243201_2713296330820668368_n.jpg?w=528"
-        >My Profile<span class="sr-only">(Current)</span></a>
+        [routerLinkActive]="'active'" (click)="collapsed=false"><img class="img" [src]="userData.foto"
+        >{{userData.firstName}}<span class="sr-only">(Current)</span></a>
       </li>
+
+      <li class="nav-item"  *ngIf="isMobila">
+        <a class="nav-link profile" routerLink="my-profile"
+        [routerLinkActive]="'active'" (click)="collapsed=false"><img class="img" 
+        src="../../assets/images/messages.png">
+        Message<span class="sr-only">(Current)</span></a>
+      </li>
+
+      <li class="nav-item" *ngIf="isMobila">
+        <a class="nav-link profile" routerLink="my-profile"
+        [routerLinkActive]="'active'" (click)="collapsed=false"><img class="img" src="../../assets/images/group.png">
+        Groups<span class="sr-only">(Current)</span></a>
+      </li>
+
+      <li class="nav-item" *ngIf="isMobila">
+        <a class="nav-link profile" routerLink="my-profile"
+        [routerLinkActive]="'active'" (click)="collapsed=false"><img class="img" src="../../assets/images/video.png">
+        Video<span class="sr-only">(Current)</span></a>
+      </li>
+
+      <li class="nav-item" *ngIf="isMobila">
+        <a class="nav-link profile" routerLink="my-profile"
+        [routerLinkActive]="'active'" (click)="collapsed=false"><img class="img" 
+        src="../../assets/images/music.png">
+        Music<span class="sr-only">(Current)</span></a>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/"
         [routerLinkActive]="'active'"
-        [routerLinkActiveOptions]="{exact: true}">Main</a>
+        [routerLinkActiveOptions]="{exact: true}" (click)="collapsed=false">Main</a>
       </li>
-      <li class="nav-item">
+ 
+      
+
+   
+    </ng-container>
+      <li class="nav-item" *ngIf="!($user | async)">
         <a class="nav-link" routerLink="sign-up"
         [routerLinkActive]="'active'"
-        [routerLinkActiveOptions]="{exact: true}">Sign Up</a>
+        [routerLinkActiveOptions]="{exact: true}"  (click)="collapsed=false">Sign Up</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Log In</a>
+      <li class="nav-item" *ngIf="!($user | async)">
+        <a class="nav-link" routerLink="log-in"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{exact: true}"  (click)="collapsed=false">Log In</a>
+      </li>
+      <li class="nav-item" *ngIf="$user | async">
+        <a class="nav-link" [routerLinkActive]="'active'" routerLink="log-in"
+        [routerLinkActiveOptions]="{exact: true}" (click)="collapsed=false" (click)="logOut()">Log Out</a>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

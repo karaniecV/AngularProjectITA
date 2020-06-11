@@ -1,127 +1,118 @@
-<form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
-  <div class="row">
-    <div class="form-group col-6">
-      <input ngModel name="firstName" required minlength="1" type="text" class="form-control" id="inputFirstName"
-        placeholder="First name" title="First name" #firstName="ngModel">
-      <div class="mistake" *ngIf="firstName.errors && firstName.touched || firstName.errors && isInvalid">
-        <img src="assets/images/att.svg">
-        <p class="text-danger">Enter your first name</p>
-      </div>
-
-    </div>
-    <div class="form-group col-6">
-      <input ngModel required minlength="1" name="secondName" type="text" class="form-control" id="inputSecondName"
-        placeholder="Second Name" title="Second name" #secondName="ngModel">
-      <div class="mistake" *ngIf="secondName.errors && secondName.touched || secondName.errors && isInvalid">
-        <img src="assets/images/att.svg">
-        <p class="text-danger">Enter your second name</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-12 email-cls">
-      <div class="email-input">
-        <input ngModel appEmailPhoneValidator required #emailPhone="ngModel" name="emailPhone" class="form-control "
-          id="inputPhoneEmail" placeholder="Phone number or Email" title="Phone number or Email">
-        <div class="mistake" *ngIf="emailPhone.errors && emailPhone.touched || emailPhone.errors && isInvalid">
+<div class="container">
+  <h2>Create a New Account</h2>
+  <h5>It’s quick and easy</h5>
+  
+  <form (ngSubmit)="onFormSubmit(formSign)" #formSign="ngForm">
+    <div class="row">
+      <div class="form-group col-6">
+        <input ngModel name="firstName" required minlength="1" type="text" class="form-control" id="inputFirstName"
+          placeholder="First name" title="First name" #firstName="ngModel">
+        <div class="mistake" *ngIf="firstName.errors && firstName.touched || firstName.errors && isInvalid">
           <img src="assets/images/att.svg">
-          <p class="text-danger">Enter phone number or Email</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <div>
-      <label>Birthday</label>
-    </div>
-    <div style="display: flex;">
-      <select class="form-control  col-md-3" ngModel name="monthBth" required #monthBth="ngModel" title="Month">
-        <option value="" selected disabled>Month</option>
-        <option value="1">Jan</option>
-        <option value="2">Feb</option>
-        <option value="3">Mar</option>
-        <option value="4">Apr</option>
-        <option value="5">May</option>
-        <option value="6">Jun</option>
-        <option value="7">Jul</option>
-        <option value="8">Aug</option>
-        <option value="9">Sep</option>
-        <option value="10">Oct</option>
-        <option value="11">Nov</option>
-        <option value="12">Dec</option>
-      </select>
-      <select class="form-control col-md-3" ngModel name="dayBth" required #dayBth="ngModel" title="Day">
-        <option value="" selected disabled>Day</option>
-        <option *ngFor="let day of days" >{{day}}</option>
-      </select>
-      <select class="form-control col-md-3" ngModel name="yearBth" required #yearBth="ngModel" title="Year">
-        <option value="" selected disabled>Year</option>
-        <option *ngFor="let year of years">{{year}}</option>
-      </select>
-    </div>
-    <div class="mistake" *ngIf="(monthBth.errors &&
-    monthBth.touched ) || (monthBth.errors && isInvalid) || (dayBth.errors &&
-    dayBth.touched ) || (dayBth.errors && isInvalid)|| (yearBth.errors &&
-    yearBth.touched ) || (yearBth.errors && isInvalid)">
-      <img src="assets/images/att.svg">
-      <p class="text-danger">Select your birthday. You can change who can see this later.</p>
-    </div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <input ngModel required minlength="3" name="password" type="password" class="form-control" id="inputPassword"
-        placeholder="Password" title="Password" #password="ngModel">
-      <div class="mistake" *ngIf="password.errors && password.touched || password.errors && isInvalid">
-        <img src="assets/images/att.svg">
-        <p class="text-danger">Enter password</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="exampleInputEmail1">Gender</label>
-      <div class="mistake" *ngIf="!(getOther >= 0) && isInvalid">
-        <img src="assets/images/att.svg">
-        <p class="text-danger">Select your gender</p>
-      </div>
-
-    </div>
-    <div class="form-group col-md-4" *ngFor="let gender of genders; let i = index" (click)="genderClick(i)">
-      <input ngModel required [value]="gender" type="radio" name="gender" [id]="gender" #gender="ngModel">
-      <label [innerHTML]="gender" [for]="gender"></label>
-    </div>
-
-
-  </div>
-
-  <div *ngIf="getOther === 2">
-    <div class="form-row">
-      <div class="form-group col-md-12 pronoun">
-        <select class="form-control" ngModel name="pronoun" required #pronoun="ngModel">
-          <option value="" selected disabled>Select your pronoun</option>
-          <option value="1">She: "Wish her a happy birthday!"</option>
-          <option value="2">He: "Wish him a happy birthday!"</option>
-          <option value="3">They: "Wish them a happy birthday!"</option>
-        </select>
-        <div>Your pronoun is visible to everyone.</div>
-        <div class="mistake" *ngIf="pronoun.errors && pronoun.touched || pronoun.errors && isInvalid">
-          <img src="assets/images/att.svg">
-          <p class="text-danger">Select your pronoun</p>
+          <p class="text-danger">Enter your first name</p>
         </div>
 
       </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12 genderoption">
-        <input ngModel minlength="3" name="genderoption" type="text" class="form-control" id="genderoption"
-          placeholder="Gender (optional)" title="Gender (optional)">
+      <div class="form-group col-6">
+        <input ngModel required minlength="1" name="secondName" type="text" class="form-control" id="inputSecondName"
+          placeholder="Second Name" title="Second name" #secondName="ngModel">
+        <div class="mistake" *ngIf="secondName.errors && secondName.touched || secondName.errors && isInvalid">
+          <img src="assets/images/att.svg">
+          <p class="text-danger">Enter your second name</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <button type="submit" class="btn btn-primary">Sign up</button>
-</form>
+    <div class="form-row">
+      <div class="form-group col-md-12 email-cls">
+        <div class="email-input">
+          <input ngModel appEmailPhoneValidator required #emailPhone="ngModel" name="emailPhone" class="form-control"
+            id="inputPhoneEmail" placeholder="Phone number or Email" title="Phone number or Email">
+          <div class="mistake" *ngIf="emailPhone.errors && emailPhone.touched ||
+        emailPhone.errors && isInvalid">
+            <img src="assets/images/att.svg">
+            <p class="text-danger">Enter phone number or Email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <div>
+          <label>Birthday</label>
+        </div>
+        <div style="display: flex;">
+          <select ngModel required class="form-control col-md-3" name="monthBth" #monthBth="ngModel" title="Month">
+            <option value="" selected disabled>Month</option>
+            <option *ngFor="let month of monthOpt" value="{{month.value}}">{{month.label}}</option>
+          </select>
+          <select class="form-control col-md-3" ngModel name="dayBth" required #dayBth="ngModel" title="Day">
+            <option value="" selected disabled>Day</option>
+            <option *ngFor="let day of days">{{day}}</option>
+          </select>
+          <select class="form-control col-md-3" ngModel name="yearBth" required #yearBth="ngModel" title="Year">
+            <option value="" selected disabled>Year</option>
+            <option *ngFor="let year of years">{{year}}</option>
+          </select>
+        </div>
+        <div class="mistake" *ngIf="(monthBth.errors && monthBth.touched ) || (monthBth.errors && isInvalid) ||
+        (dayBth.errors && dayBth.touched ) || (dayBth.errors && isInvalid)|| (yearBth.errors &&
+        yearBth.touched ) || (yearBth.errors && isInvalid)">
+          <img src="assets/images/att.svg">
+          <p class="text-danger">Select your birthday. You can change who can see this later.</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <input ngModel required minlength="3" name="password" type="password" class="form-control" id="inputPassword"
+          placeholder="Password" title="Password" #password="ngModel">
+        <div class="mistake" *ngIf="password.errors && password.touched || password.errors && isInvalid">
+          <img src="assets/images/att.svg">
+          <p class="text-danger">Enter password</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="exampleInputEmail1">Gender</label>
+        <div class="mistake" *ngIf="!(getOther >= 0) && isInvalid">
+          <img src="assets/images/att.svg">
+          <p class="text-danger">Select your gender</p>
+        </div>
+
+      </div>
+      <div class="form-group col-md-4" *ngFor="let gender of genders; let i = index" (click)="genderClick(i)">
+        <input ngModel required [value]="gender" type="radio" name="gender" [id]="gender" #gender="ngModel">
+        <label [innerHTML]="gender" [for]="gender"></label>
+      </div>
+    </div>
+
+    <div *ngIf="getOther === 2">
+      <div class="form-row">
+        <div class="form-group col-md-12 pronoun">
+          <select class="form-control" ngModel name="pronoun" required #pronoun="ngModel">
+            <option value="" selected disabled>Select your pronoun</option>
+            <option value="1">She: "Wish her a happy birthday!"</option>
+            <option value="2">He: "Wish him a happy birthday!"</option>
+            <option value="3">They: "Wish them a happy birthday!"</option>
+          </select>
+          <div>Your pronoun is visible to everyone.</div>
+          <div class="mistake" *ngIf="pronoun.errors && pronoun.touched || pronoun.errors && isInvalid">
+            <img src="assets/images/att.svg">
+            <p class="text-danger">Select your pronoun</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12 genderoption">
+          <input ngModel minlength="3" name="genderoption" type="text" class="form-control" id="genderoption"
+            placeholder="Gender (optional)" title="Gender (optional)">
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign up</button>
+  </form>
+</div>

@@ -1,2 +1,54 @@
-<a routerLink="my-profile" [routerLinkActive]="'active'" appHide ><img src="https://techcrunch.com/wp-content/uploads/2015/09/11667534_10102203860243201_2713296330820668368_n.jpg?w=528">My Profile</a> <br>
-<a routerLink="message" [routerLinkActive]="'active'"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Google_Messages_logo.svg/250px-Google_Messages_logo.svg.png">Message</a>
+<div class="container">
+  <div class="row" style="flex-direction: column;">
+
+      <div class="link-item row" appFocus2>
+        <a class="" routerLink="my-profile" [routerLinkActive]="'active'">
+          <img class=""
+          src="{{userData.foto}}">
+          {{userData.firstName}}</a>
+      </div>
+
+      <div class="link-item row" appFocus2>
+        <a class=""  routerLink="message" [routerLinkActive]="'active'" >
+          <img class=""
+          src="../../assets/images/messages.png">
+          Message</a>
+      </div>
+
+      <div class="link-item row" appFocus2>
+        <a class=""  routerLink="message" [routerLinkActive]="'active'" >
+          <img class=""
+          src="../../assets/images/group.png">
+          Groups</a>
+      </div>
+
+      <div class="link-item row" appFocus2>
+        <a class=""  routerLink="message" [routerLinkActive]="'active'" >
+          <img class=""
+          src="../../assets/images/video.png">
+          Video</a>
+      </div>
+
+      <div class="link-item row" appFocus2>
+        <a class=""  routerLink="message" [routerLinkActive]="'active'" >
+          <img class=""
+          src="../../assets/images/music.png">
+          Music</a>
+      </div>
+
+      <div class="link-item row" appFocus2>
+        <a class=""  routerLink="message" [routerLinkActive]="'active'" >
+          <img class=""
+          src="../../assets/images/react.png">
+          Last News</a>
+      </div>
+
+      <div class="link-item row" appFocus2>
+        <a class=""  routerLink="message" [routerLinkActive]="'active'" >
+          <img class=""
+          src="../../assets/images/vue.png">
+          Events</a>
+      </div>
+
+  </div>
+</div>

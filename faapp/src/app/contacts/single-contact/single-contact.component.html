@@ -1,0 +1,29 @@
+<div class="back" *ngIf="contactClick">
+  <div class="contact">
+    <div class="main-info-user row">
+        <div class="foto-user col-7"><img [src]="contactClick.foto" alt="" style="max-width: 500px;"></div>
+        <div class="user-names col-5">
+          <h2>{{contactClick.firstName}}</h2>
+          <h1>{{contactClick.secondName}}</h1>
+          <h4>{{contactClick.emailPhone}}</h4>
+          <button class="btn btn-danger" (click)="onDeliteContact(contactClick.id)">remove from contacts</button>
+        </div>
+    </div>
+    <div class="second-info-user">
+      <div class="bate-birth">
+        <div>Date of Birth</div>
+        <div>{{contactClick.monthBth}}.{{contactClick.dayBth}}.{{contactClick.yearBth}}</div>
+      </div>
+      <div class="place-birth">
+        <div>Place of Birth</div>
+        <div>Manaco</div>
+      </div>
+      <div>
+        <div>alma mater</div>
+        <div>BDU</div>
+      </div>
+      <div></div>
+      <div></div>
+
+    </div>
+  </div>

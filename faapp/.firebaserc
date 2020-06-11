@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "faapp-80000": {
+      "hosting": {
+        "faapp": [
+          "faapp-80000"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "faapp-80000"
+  }
+}

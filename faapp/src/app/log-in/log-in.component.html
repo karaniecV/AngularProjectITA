@@ -1,0 +1,32 @@
+<div class="container">
+  <form (ngSubmit)="onFormSubmit(formSign)" #formSign="ngForm">
+    
+
+    <div class="form-row">
+      <div class="form-group col-md-12 email-cls">
+        <div class="email-input">
+          <input ngModel appEmailPhoneValidator required #emailPhone="ngModel" name="emailPhone" class="form-control"
+            id="inputPhoneEmail" placeholder="Phone number or Email" title="Phone number or Email">
+          <div class="mistake" *ngIf="emailPhone.errors && emailPhone.touched ||
+        emailPhone.errors && isInvalid">
+            <img src="assets/images/att.svg">
+            <p class="text-danger">Enter phone number or Email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <input ngModel required minlength="3" name="password" type="password" class="form-control" id="inputPassword"
+          placeholder="Password" title="Password" #password="ngModel">
+        <div class="mistake" *ngIf="password.errors && password.touched || password.errors && isInvalid">
+          <img src="assets/images/att.svg">
+          <p class="text-danger">Enter password</p>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Log In</button>
+  </form>
+</div>

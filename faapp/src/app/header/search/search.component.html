@@ -1,4 +1,54 @@
-<form class="form-inline my-2 my-lg-0">
-  <app-search-input></app-search-input>
-  <app-search-btn></app-search-btn> 
+<form class="form-inline my-2 my-lg-0" *ngIf="$user | async">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+   (input)="onEvent($event.target.value)">
+  <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="submit"> Search </button> -->
 </form>
+
+<div class="container container-contact" *ngIf="isFiended" >
+  <div class="row search-contact">
+    <div class="row header" style="padding-top: 10px; padding-left: 15px; justify-content: space-around;">
+      <div class="" >Search for people or groups</div>
+      <div class="btn-cncl col-2" (click)="isFiended = false">
+        <img src="../../assets/images/cancel.png" alt="" appFocus1 style="height: 15px; width: 15px;">
+      </div>
+    </div>
+    <hr>
+    <div class="contact-box">
+      <div class="row contact-item2" *ngFor="let usersNewArr of usersNewArr" (click)="onUserClick(usersNewArr.userId)" appFocus2>
+        <img class="contact-img" [src]="usersNewArr.userFoto" alt="">
+        <div class="contact-name">{{usersNewArr.userName}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="back" *ngIf="isClickUser">
+  <div class=" post">
+    <div class="main-info-user row">
+        <div class="foto-user col-7"><img [src]="userClick.foto" alt=""></div>
+        <div class="user-names col-5">
+          <div>{{userClick.firstName}}</div>
+          <div>{{userClick.secondName}}</div>
+          <div>{{userClick.emailPhone}}</div>
+          <button (click)="onAddUser()">add to contacts</button>
+        </div>
+    </div>
+    <!-- <div class="second-info-user">
+      <div class="bate-birth">
+        <div>Date of Birth</div>
+        <div>{{userClick.monthBth}}.{{userClick.dayBth}}.{{userClick.yearBth}}</div>
+      </div>
+      <div class="place-birth">
+        <div>Place of Birth</div>
+        <div>Manaco</div>
+      </div>
+      <div>
+        <div>alma mater</div>
+        <div>BDU</div>
+      </div>
+      <div></div>
+      <div></div>
+
+    </div> -->
+  </div>
+</div>

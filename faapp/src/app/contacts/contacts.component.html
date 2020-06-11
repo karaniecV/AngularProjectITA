@@ -1,0 +1,40 @@
+<div class="contacts">
+  <div class="contacts-list container">
+    <div class="contact-item row">
+      <div class="banner">Contacts</div>
+      <div class="" title="Search by name or group" (click)="showContsctList()" appFocus1>
+        <img src="../../assets/images/icon_search.png" style="width: 32px;"></div>
+    </div>
+
+
+    <div class="contact-item row" *ngFor="let userFriend of usersFriends" appFocus2
+    [routerLink]="['/contacts', userFriend.id]">
+      <img class="contact-img" [src]="userFriend.foto" alt="">
+      <div class="contact-name">{{userFriend.firstName}} {{userFriend.secondName}}</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container container-contact" *ngIf="isShow">
+  <div class="row search-contact">
+    <div class="row header" style="padding-top: 10px; padding-left: 15px; justify-content: space-around;">
+      <div class="" >Messenger Search</div>
+      <div class="btn-cncl col-2" (click)="showContsctList()">
+        <img src="../../assets/images/cancel.png" alt="" appFocus1 style="height: 15px;">
+      </div>
+    </div>
+    <hr>
+    <div>
+      <input type="text" placeholder="Search by name or group" autofocus
+      (input)="onInputChange($event.target.value)">
+    </div>
+    <hr>
+    <div class="contact-box">
+      <div class="row contact-item2" *ngFor="let newArr of newArr" appFocus2>
+        <img class="contact-img" [src]="newArr.image" alt="">
+        <div class="contact-name">{{newArr.name}}</div>
+      </div>
+    </div>
+  </div>
+</div>

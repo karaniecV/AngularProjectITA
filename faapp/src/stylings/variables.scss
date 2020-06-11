@@ -1,2 +1,11 @@
 $fontcolor: #320f38;
-$mainfont: 'Cuprum', sans-serif;
+$mainfont: none;
+$colorwindow:  rgba(245, 248, 250, 0.945);
+$colorshadow: rgba(221, 219, 219, 0.925);
+$fontbanner:#929292;
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
