@@ -26,12 +26,12 @@ export class ContactsComponent implements OnInit {
     this.contactsService.getFriendsId()
     .pipe(
       finalize(()=>{
-        this.contactsService.usersFrends.subscribe((data)=>{
+        this.contactsService.usersFrends.subscribe((data)=>{console.log('gdhghge', data)
           this.usersFriends = data;
         })
       })
     )
-    .subscribe((data) => {
+    .subscribe((data) => { 
       this.contactsService.usersFrends.next(data)
        this.usersFriends = data.value;
     })

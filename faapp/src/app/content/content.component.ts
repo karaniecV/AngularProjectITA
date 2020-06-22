@@ -33,7 +33,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     if (localStorage.getItem(`${CONFIG.localStorageId}`)) {
-      this.authSevice.autoLogIn();
+      // this.authSevice.autoLogIn();
       this.authSevice.getSignUser(localStorage.getItem(`${CONFIG.localStorageId}`))
         .subscribe(user => this.userData = user)
 

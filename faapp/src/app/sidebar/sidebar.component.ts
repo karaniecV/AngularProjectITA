@@ -17,9 +17,11 @@ export class SidebarComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem(`${CONFIG.localStorageId}`)){
     this.authService.getSignUser(localStorage.getItem(`${CONFIG.localStorageId}`))
-    .subscribe((user) => {this.userData = user})
-
+    .subscribe((user: ContactData) => { return this.userData = user})
+    }
+    console.log('this.userData', this.userData)
   }
 
   onSidebarClick(item: number){

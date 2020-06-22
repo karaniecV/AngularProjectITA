@@ -68,7 +68,6 @@ export class AuthService {
   }
 
   getSignUser(userId): Observable<any> {
-    debugger
     return this.http.get(`${CONFIG.server}/userData/${userId}.json`)
       .pipe(
         map((data) => {
